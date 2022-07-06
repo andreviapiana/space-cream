@@ -1,0 +1,328 @@
+/* ============================== RESET ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* ============================== VARIÁVEIS ============================== */
+  :root {
+    /* FONT FAMILY */
+    --ff-heading: 'Staatliches', cursive;
+    --ff-texting: 'Palanquin', sans-serif;
+    --ff-desktop: 'Roboto', sans-serif;
+    --ff-footer: 'Open Sans', sans-serif;
+    
+    /* BG COLORS */
+    --bg-primary: #8E9AAF;
+    --bg-secondary: #EFF1FF;
+    --bg-title: #CBC0D3;
+    --bg-button: #FEEAFA;
+
+    /* FONT COLORS */
+    --fc-primary: #FFFFFF;
+    --fc-secondary: #23053A;
+    --fc-third: #4A4E69;
+  
+    /* FONT SIZES */
+    font-size: 62.5%;
+    --fs-body: 2.0rem;
+    --fs-heading: 4.0rem;
+  }
+
+  /* ============================== BODY ============================== */
+  body {
+    font-family: var(--ff-texting);
+
+    font-size: var(--fs-body);
+
+    background: var(--bg-secondary);
+
+    color: var(--fc-third);
+  }
+
+  .page {
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* ============================== HEADER ============================== */
+  header {
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+
+    height: 28rem;
+
+    text-align: center;
+
+    animation: topdown 700ms;
+  }
+  
+  header img {
+    width: fit-content;
+    height: 13.7rem;
+    margin: 3.2rem auto 2.1rem;
+
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25))
+  }
+  
+  header h1 {
+    font-family: var(--ff-heading);
+    color: var(--fc-primary);
+    font-size: var(--fs-heading);
+    font-weight: 400;
+    background: var(--bg-title);
+    line-height: 4.9rem;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    letter-spacing: 0.05em;
+  }
+
+  .text p {
+    font-family: var(--ff-texting);
+    color: var(--fc-secondary);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: center;
+
+    padding: 0 3.95rem;
+
+    margin: 1.4rem auto 6.3rem;
+
+    animation: topdown 700ms 350ms backwards;
+  }
+
+  .text span {
+    display: none;
+  }
+
+  /* ============================== MAIN ============================== */
+  main {
+    display: grid;
+    gap: 3.2rem;
+    padding: 0 3.2rem 6rem;
+    animation: downtop 700ms 350ms backwards;
+  }
+
+  .card {
+    position: relative;
+
+    border-radius: 20px;
+
+    transition: all 200ms;
+  }
+
+  .card img {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 25rem;
+  }
+
+  .card:nth-child(even) img {
+    height: 45rem;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+
+  .card h2 {
+    position: absolute;
+    border-radius: 2rem;
+    background-color: var(--bg-button);
+    font-size: var(--fs-body);
+    font-family: var(--ff-heading);
+    font-weight: 400;
+    line-height: 3.5rem;
+    color: var(--fc-secondary-dark);
+    padding: 0 2.4rem;
+  
+    width: fit-content;
+
+    letter-spacing: 0.05em;
+
+    top: 1.6rem;
+    right: 1.6rem;
+
+    animation: topdown 800ms 350ms forwards;
+  }
+
+  /* ============================== FOOTER ============================== */
+  footer {
+    display: none;
+  }
+
+  /* ============================== KEYFRAMES ============================== */
+  @keyframes topdown {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes downtop {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ============================== MEDIA QUERIES - TABLET ============================== */
+  @media (min-width: 600px) {
+    .page {
+      height: 100vh;
+      width: 100%;
+      max-width: 128rem;
+      display: grid;
+      grid-template-columns: 4fr 6fr;
+      grid-template-rows: 1fr 12rem;
+      grid-template-areas:
+        "header-info main"
+        "header-info footer"
+    }
+  
+    .header-info {
+      background: var(--bg-primary);
+      grid-area: header-info;
+    }
+  
+    .text p {
+      color: var(--fc-primary);
+      font-size: 1.8rem;
+      line-height: 2.0rem;
+    }
+  
+    .text span {
+      display: initial;
+    }
+  
+    main {
+      width: 100%;
+      padding: 5.0rem;
+      display: grid;
+  
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-rows: repeat(3, 25rem);
+      gap: 2.4rem;
+      }
+  
+    .card:nth-child(even) img {
+      height: 25.0rem;
+    }
+
+    .card h2 {
+      animation: none;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .card:hover h2 {
+      opacity: 1;
+      transition: 1000ms 150ms;
+    }
+  
+    footer {
+      grid-area: footer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    footer p {
+      font-family: var(--ff-footer);
+      font-size: 1.4rem;
+      color: var(--fc-third);
+    }
+  
+    footer span {
+      font-weight: bold;
+    }
+  }
+  
+  /* ============================== MEDIA QUERIES - DESKTOP ============================== */
+  @media (min-width: 990px) {
+    .page {
+      max-width: 128rem;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 3fr 7fr;
+      grid-template-rows: 1fr 10rem;
+      grid-template-areas:
+        "header-info main"
+        "header-info footer"
+    }
+
+    main {
+      grid: 20rem 16.8rem 20rem / 1fr 1fr 1fr;
+      margin: auto;
+      padding: 6.4rem auto 5rem;
+      gap: 3.2rem;
+      grid-template-areas:
+      "A B E"
+      "D B F"
+      "D C F";
+    }
+
+    .card:nth-child(even) img {
+      height: 40rem;
+    }
+
+    .card:nth-child(odd) img {
+      height: 20rem;
+    }
+  
+    main div:nth-child(1) {
+      grid-area: A;
+    }
+  
+    main div:nth-child(2) {
+      grid-area: B;
+    }
+  
+    main div:nth-child(3) {
+      grid-area: C;
+    }
+  
+    main div:nth-child(4) {
+      grid-area: D;
+    }
+
+    main div:nth-child(5) {
+      grid-area: E;
+    }
+
+    main div:nth-child(6) {
+      grid-area: F;
+    }
+
+    .card h2 {
+      animation: none;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .card:hover h2 {
+      opacity: 1;
+      transition: 1000ms 150ms;
+    }
+  }
+
