@@ -1,6 +1,6 @@
 # Desafio Avançado: GRID com Animações - Rocketseat Explorer :rocket:
 
-Este desafio é a junção do desafios 7 e 8 disponíveis no curso, no Stage 03 - Avançando no HTML e CSS.
+Este desafio é a junção dos desafios 7 e 8 disponíveis no curso, no Stage 03 - Avançando no HTML e CSS.
 
 Nele devemos criar uma página utilizando os conceitos de responsividade e animação em conjunto com o alinhamento do tipo GRID. A parte 7 refere-se a criação da página mobile, enquanto a parte 8 é a adição da responsividade para dispositivos maiores. A página em formato desktop é vista na imagem abaixo:
 
