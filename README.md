@@ -1,13 +1,13 @@
-# Desafio Avançado: GRID com Animações - Rocketseat Explorer :rocket:
+# Advanced Challenge: GRID with Animations - Rocketseat Explorer :rocket:
 
-Este desafio é a junção dos desafios 7 e 8 disponíveis no curso, no Stage 03 - Avançando no HTML e CSS.
+This challenge is a combination of challenges 7 and 8 available in the course, in Stage 03 - Advancing in HTML and CSS.
 
-Nele devemos criar uma página utilizando os conceitos de responsividade e animação em conjunto com o alinhamento do tipo GRID. A parte 7 refere-se a criação da página mobile, enquanto a parte 8 é a adição da responsividade para dispositivos maiores. A página em formato desktop é vista na imagem abaixo:
+In it we must create a page using the concepts of responsiveness and animation together with the alignment of the GRID type. Part 7 is about creating the mobile page, while part 8 is adding responsiveness for larger devices. The page in desktop format is seen in the image below:
 
 ![Untitled7](https://user-images.githubusercontent.com/106932234/177558775-0706db1e-6376-4ea8-9e53-4340b468b32c.png)
 
-O objetivo final foi atingido.
+The ultimate goal has been reached.
 
-O carregamento dos arquivos foi todo feito via linha de comando utilizando o Git Bash.
+The loading of the files was all done via the command line using Git Bash.
 
-[O resultado final pode ser visto aqui](https://andreviapiana.github.io/space-cream/)
+[The final result can be seen here](https://andreviapiana.github.io/space-cream/)
