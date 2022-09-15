@@ -10,4 +10,4 @@ The ultimate goal has been reached.
 
 The loading of the files was all done via the command line using Git Bash.
 
-[The final result can be seen here](https://rocketmovies-deploy.netlify.app/)
+[The final result can be seen here](https://andreviapiana.github.io/space-cream/)
